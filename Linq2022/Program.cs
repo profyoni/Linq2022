@@ -6,6 +6,8 @@ using Humanizer;
 
 var nums = Enumerable.Range(1, 1_000_000_000);
 
+var seq2 = nums.Select(elt => new {Id = elt, Bday = DateTime.Now});
+
 var seq = nums
     .Where(MyMath.IsPrime)
     .Skip(1_000_000)
