@@ -63,7 +63,7 @@ namespace Linq.Test
             var grps = words.GroupBy(w => w.ToUpper())
                 .OrderByDescending(g => g.Count()).ToList();
             grps.Count().Should().Be(6);
-            grps.First().Key.Should().Be("THE");
+            grps.First().Key.Should().Be("THE"); 
             grps.Last().Key.Should().Be("ORANGE");
 
             var top2 = grps.Take(2).ToList();
